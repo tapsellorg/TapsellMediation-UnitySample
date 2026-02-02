@@ -1,7 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Tapsell.Mediation.Editor.Utils;
 using UnityEditor.Android;
 
 namespace Tapsell.Mediation.Editor
@@ -18,51 +18,58 @@ namespace Tapsell.Mediation.Editor
         {
             var gradlePropertiesFile = Path.GetFullPath(Path.Combine(path, "..", GradlePropertiesFile));
 
-            IDictionary<string, string> properties;
+            // Only proceed if file exists; don't create a new file.
+            if (!File.Exists(gradlePropertiesFile)) return;
 
-            // Safely read the file if it already exists
-            if (File.Exists(gradlePropertiesFile))
+            var lines = File.ReadAllLines(gradlePropertiesFile).ToList();
+
+            // Try to find existing key line (ignoring leading spaces, but not commented-out lines)
+            var index = -1;
+            for (var i = 0; i < lines.Count; i++)
             {
-                // The 'using' statement ensures the reader is closed automatically
-                using (var propertiesReader = File.OpenText(gradlePropertiesFile))
-                {
-                    properties = PropertiesHelper.Load(propertiesReader);
-                }
+                var line = lines[i];
+                var trimmedStart = line.TrimStart();
+                if (trimmedStart.StartsWith("#")) continue; // skip commented lines
+                if (!trimmedStart.StartsWith(JetifierIgnorePropertyKey + "=")) continue;
+                index = i;
+                break;
+            }
+
+            if (index >= 0)
+            {
+                // Append Moshi package to the existing value if not present
+                var line = lines[index].Trim();
+                var valuePart = line.Substring(JetifierIgnorePropertyKey.Length + 1); // after '='
+
+                // Build new value, avoid duplicates
+                var parts = valuePart
+                    .Split(',')
+                    .Select(p => p.Trim())
+                    .ToList();
+
+                if (parts.Contains(MoshiPackage)) return; // moshi is present -> no change
+
+                lines[index] = "# " + line + " --- Tapsell Mediation Properties Will Be Handled!";
+                AppendTapsellPropertiesBlock(lines, parts.Append(MoshiPackage).ToList());
             }
             else
             {
-                properties = new Dictionary<string, string>();
+                AppendTapsellPropertiesBlock(lines, new List<string> { MoshiPackage });
             }
 
-            // Modify the properties in memory
-            if (properties.ContainsKey(JetifierIgnorePropertyKey))
-            {
-                properties[JetifierIgnorePropertyKey] =
-                    AddPackageIfNotPresent(properties[JetifierIgnorePropertyKey], MoshiPackage);
-            }
-            else
-            {
-                properties[JetifierIgnorePropertyKey] = MoshiPackage;
-            }
-
-            // Safely write the properties back.
-            using (var writer = File.CreateText(gradlePropertiesFile))
-            {
-                PropertiesHelper.Write(properties, writer);
-            }
+            // Write without trailing newline to match test expectations
+            var content = string.Join(Environment.NewLine, lines);
+            File.WriteAllText(gradlePropertiesFile, content);
         }
 
-        private static string AddPackageIfNotPresent(string currentValue, string newPackage)
+        private void AppendTapsellPropertiesBlock(List<string> lines, List<string> ignoreList)
         {
-            var trimmedValue = currentValue.Trim();
-            if (trimmedValue.Length == 0) return newPackage;
-
-            if (trimmedValue.Split(',').Any(package => package.Trim().Equals(newPackage)))
-            {
-                return currentValue;
-            }
-
-            return currentValue + ", " + newPackage;
+            // # Tapsell Mediation Properties Start
+            // key=value
+            // # Tapsell Mediation Properties End
+            lines.Add("# Tapsell Mediation Properties Start");
+            lines.Add(JetifierIgnorePropertyKey + "=" + string.Join(",", ignoreList));
+            lines.Add("# Tapsell Mediation Properties End");
         }
     }
 }
