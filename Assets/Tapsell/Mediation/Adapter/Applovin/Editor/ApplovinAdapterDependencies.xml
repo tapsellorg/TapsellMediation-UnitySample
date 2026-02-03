@@ -1,5 +1,5 @@
 <dependencies>
     <androidPackages>
-        <androidPackage spec="ir.tapsell.mediation.adapter:applovin-unity:1.3.0-beta03" />
+        <androidPackage spec="ir.tapsell.mediation.adapter:applovin-unity:1.3.0-beta04" />
     </androidPackages>
 </dependencies>
