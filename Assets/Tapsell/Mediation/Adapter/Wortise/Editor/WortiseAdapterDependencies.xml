@@ -1,6 +1,6 @@
 <dependencies>
     <androidPackages>
-        <androidPackage spec="ir.tapsell.mediation.adapter:wortise-unity:1.3.0-beta04">
+        <androidPackage spec="ir.tapsell.mediation.adapter:wortise-unity:1.3.0-beta06">
             <repositories>
                 <repository>https://maven.wortise.com/artifactory/public</repository>
             </repositories>
