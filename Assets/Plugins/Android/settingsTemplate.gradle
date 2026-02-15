@@ -28,6 +28,9 @@ dependencyResolutionManagement {
             url "https://artifactory.appodeal.com/appodeal-public/" // Assets/Tapsell/Mediation/Adapter/Chartboost/Editor/ChartboostAdapterDependencies.xml:8
         }
         maven {
+            url "https://maven.wortise.com/artifactory/public" // Assets/Tapsell/Mediation/Adapter/Wortise/Editor/WortiseAdapterDependencies.xml:6
+        }
+        maven {
             url "https://maven.google.com/" // Assets/Tapsell/Mediation/Adapter/Yandex/Editor/YandexAdapterDependencies.xml:7, Assets/Tapsell/Mediation/Editor/MediationDependencies.xml:9
         }
         maven {
@@ -35,9 +38,6 @@ dependencyResolutionManagement {
         }
         maven {
             url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea" // Assets/Tapsell/Mediation/Adapter/Mintegral/Editor/MintegralAdapterDependencies.xml:7
-        }
-        maven {
-            url "https://maven.wortise.com/artifactory/public" // Assets/Tapsell/Mediation/Adapter/Wortise/Editor/WortiseAdapterDependencies.xml:7
         }
         mavenLocal()
 // Android Resolver Repos End
