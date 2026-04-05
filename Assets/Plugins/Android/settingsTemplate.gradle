@@ -17,6 +17,27 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
 // Android Resolver Repos Start
+        maven {
+            url "https://maven.tapsell.ir/" // Assets/Tapsell/Mediation/Editor/TapsellMediationDependencies.xml:23
+        }
+        maven {
+            url "https://maven.google.com/" // Assets/Tapsell/Mediation/Editor/TapsellMediationDependencies.xml:23
+        }
+        maven {
+            url "https://repo1.maven.org/maven2/" // Assets/Tapsell/Mediation/Editor/TapsellMediationDependencies.xml:23
+        }
+        maven {
+            url "https://cboost.jfrog.io/artifactory/chartboost-ads" // Assets/Tapsell/Mediation/Editor/TapsellMediationDependencies.xml:23
+        }
+        maven {
+            url "https://cboost.jfrog.io/ui/native/chartboost-mediation" // Assets/Tapsell/Mediation/Editor/TapsellMediationDependencies.xml:23
+        }
+        maven {
+            url "https://artifactory.appodeal.com/appodeal-public/" // Assets/Tapsell/Mediation/Editor/TapsellMediationDependencies.xml:23
+        }
+        maven {
+            url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea" // Assets/Tapsell/Mediation/Editor/TapsellMediationDependencies.xml:23
+        }
         mavenLocal()
 // Android Resolver Repos End
         flatDir {

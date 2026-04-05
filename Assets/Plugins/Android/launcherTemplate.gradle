@@ -24,6 +24,10 @@ android {
         }
         versionCode **VERSIONCODE**
         versionName '**VERSIONNAME**'
+// Tapsell Mediation Keys Start
+		manifestPlaceholders.put("TapsellMediationAppKey", "76798342-99a7-4a5f-bf5a-60a088d5dcfb")
+		manifestPlaceholders.put("TapsellMediationAdmobAdapterSignature", "ca-app-pub-3940256099942544~3347511713")
+// Tapsell Mediation Keys End
     }
 
     aaptOptions {
