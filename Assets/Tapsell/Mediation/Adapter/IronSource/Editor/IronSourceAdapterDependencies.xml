@@ -1,5 +1,0 @@
-<dependencies>
-    <androidPackages>
-        <androidPackage spec="ir.tapsell.mediation.adapter:ironsource-unity:1.3.0-beta06" />
-    </androidPackages>
-</dependencies>

@@ -1,8 +1,0 @@
-<dependencies>
-    <androidPackages>
-        <androidPackage spec="ir.tapsell.mediation.adapter:unityads-unity:1.3.0-beta06">
-            <repositories>
-            </repositories>
-        </androidPackage>
-    </androidPackages>
-</dependencies>
