@@ -1,5 +1,5 @@
 <dependencies>
     <androidPackages>
-        <androidPackage spec="ir.tapsell.mediation.adapter:admob-unity:1.3.0-beta06"/>
+        <androidPackage spec="ir.tapsell.mediation.adapter:admob-unity:1.3.0"/>
     </androidPackages>
 </dependencies>
