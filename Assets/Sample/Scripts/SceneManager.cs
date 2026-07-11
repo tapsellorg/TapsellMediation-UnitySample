@@ -1,11 +1,30 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class SceneManager : MonoBehaviour
+namespace Sample.Scripts
 {
-
-    public void ChangeScene(string sceneName)
+    public class SceneManager : MonoBehaviour
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+        private const string MainSceneName = "MainScene";
+
+        public void ChangeScene(string sceneName)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                var currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+                if (currentScene != MainSceneName)
+                {
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(MainSceneName);
+                }
+                else
+                {
+                    Application.Quit();
+                }
+            }
+        }
     }
 }

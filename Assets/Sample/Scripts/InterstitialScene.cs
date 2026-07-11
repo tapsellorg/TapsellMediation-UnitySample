@@ -1,36 +1,38 @@
-﻿using Sample.Scripts;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class InterstitialScene : MonoBehaviour
+namespace Sample.Scripts
 {
-    private const string ZoneID = TapsellMediationKeys.INTERSTITIAL;
-    private static string _adId = "";
-
-    public void Request()
+    public class InterstitialScene : MonoBehaviour
     {
-        Tapsell.Mediation.Tapsell.RequestInterstitialAd(ZoneID,
-            adId =>
-            {
-                Debug.Log("onInterstitialAd requestSuccess");
-                _adId = adId;
-            },
-            (error) =>
-            {
-                Debug.Log("onInterstitialAd requestFailed: " + error);
-            }
-        );
-    }
+        private const string ZoneID = TapsellMediationKeys.INTERSTITIAL;
+        private static string _adId = "";
 
-    public void Show()
-    {
-        if (_adId != "")
+        public void Request()
         {
-            Tapsell.Mediation.Tapsell.ShowInterstitialAd(_adId,
-                () => { Debug.Log("onInterstitialAd impression"); },
-                () => { Debug.Log("onInterstitialAd click"); },
-                completionState => { Debug.Log("onInterstitialAd close: " + completionState); },
-                message => { Debug.Log("onInterstitialAd showFailed: " + message); }
+            Tapsell.Mediation.Tapsell.RequestInterstitialAd(ZoneID,
+                adId =>
+                {
+                    Debug.Log("onInterstitialAd requestSuccess");
+                    _adId = adId;
+                },
+                (error) =>
+                {
+                    Debug.Log("onInterstitialAd requestFailed: " + error);
+                }
             );
+        }
+
+        public void Show()
+        {
+            if (_adId != "")
+            {
+                Tapsell.Mediation.Tapsell.ShowInterstitialAd(_adId,
+                    () => { Debug.Log("onInterstitialAd impression"); },
+                    () => { Debug.Log("onInterstitialAd click"); },
+                    completionState => { Debug.Log("onInterstitialAd close: " + completionState); },
+                    message => { Debug.Log("onInterstitialAd showFailed: " + message); }
+                );
+            }
         }
     }
 }

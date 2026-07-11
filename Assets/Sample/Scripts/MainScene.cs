@@ -1,17 +1,19 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class MainScene : MonoBehaviour
+namespace Sample.Scripts
 {
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-    private static void OnRuntimeInitialize()
+    public class MainScene : MonoBehaviour
     {
-        // send result of user consent dialog to Tapsell.
-        SetUserConsent(); 
-    }
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+        private static void OnRuntimeInitialize()
+        {
+            // send result of user consent dialog to Tapsell.
+            SetUserConsent();
+        }
 
-    private static void SetUserConsent()
-    {
-        Tapsell.Mediation.Tapsell.SetUserConsent(true);
+        private static void SetUserConsent()
+        {
+            Tapsell.Mediation.Tapsell.SetUserConsent(true);
+        }
     }
 }

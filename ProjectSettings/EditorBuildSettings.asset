@@ -10,15 +10,19 @@ EditorBuildSettings:
     guid: f3a2ead900a148f8984d5487be8bf934
   - enabled: 1
     path: Assets/Sample/Scenes/RewardedScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Sample/Scenes/BannerScene.unity
-    guid: 1b5e04bb69dc41d1a6832505a0665dfa
+    guid: cf80454d6cce94bbe8d1bab17c1f3e7d
   - enabled: 1
     path: Assets/Sample/Scenes/InterstitialScene.unity
     guid: 71c489646f5146da87288101d6a44c82
   - enabled: 1
+    path: Assets/Sample/Scenes/BannerScene.unity
+    guid: 1b5e04bb69dc41d1a6832505a0665dfa
+  - enabled: 1
     path: Assets/Sample/Scenes/NativeScene.unity
     guid: b457de350546676d29580f569ce42032
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Sample/Scenes/NativeSceneTMP.unity
+    guid: c229d45735bc47fab0b6c825af83bd95
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

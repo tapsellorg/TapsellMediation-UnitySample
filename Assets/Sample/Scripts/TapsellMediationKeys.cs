@@ -1,7 +1,6 @@
-using System;
 namespace Sample.Scripts
 {
-    
+
     public static class TapsellMediationKeys {
         public const string REWARDED = "1d710cc7-5e96-46ac-a3e9-8463300333e6";
         public const string INTERSTITIAL = "b3972749-f62a-475a-9ff2-cfc9e2a40f87";

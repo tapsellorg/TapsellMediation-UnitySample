@@ -1,24 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <dependencies>
   <androidPackages>
-    <androidPackage spec="ir.tapsell:tapsell-unity:1.4.0-alpha01" />
+    <androidPackage spec="ir.tapsell:tapsell-unity:1.4.0-alpha02" />
     <androidPackage spec="androidx.lifecycle:lifecycle-process:2.6.1" />
     <androidPackage spec="androidx.core:core-ktx:1.9.0" />
-    <androidPackage spec="ir.tapsell.mediation.adapter:legacy-unity:1.4.0-alpha01" />
-    <androidPackage spec="ir.tapsell.mediation.adapter:admob-unity:1.4.0-alpha01" />
-    <androidPackage spec="ir.tapsell.mediation.adapter:applovin-unity:1.4.0-alpha01" />
-    <androidPackage spec="ir.tapsell.mediation.adapter:chartboost-unity:1.4.0-alpha01" />
-    <androidPackage spec="ir.tapsell.mediation.adapter:fyber-unity:1.4.0-alpha01" />
-    <androidPackage spec="ir.tapsell.mediation.adapter:ironsource-unity:1.4.0-alpha01" />
-    <androidPackage spec="ir.tapsell.mediation.adapter:liftoff-unity:1.4.0-alpha01" />
-    <androidPackage spec="ir.tapsell.mediation.adapter:mintegral-unity:1.4.0-alpha01" />
+    <androidPackage spec="ir.tapsell.mediation.adapter:legacy-unity:1.4.0-alpha02" />
+    <androidPackage spec="ir.tapsell.mediation.adapter:admob-unity:1.4.0-alpha02" />
+    <androidPackage spec="ir.tapsell.mediation.adapter:applovin-unity:1.4.0-alpha02" />
+    <androidPackage spec="ir.tapsell.mediation.adapter:mintegral-unity:1.4.0-alpha02" />
     <repositories>
       <repository>https://maven.tapsell.ir/</repository>
       <repository>https://maven.google.com/</repository>
       <repository>https://repo1.maven.org/maven2/</repository>
-      <repository>https://cboost.jfrog.io/artifactory/chartboost-ads</repository>
-      <repository>https://cboost.jfrog.io/ui/native/chartboost-mediation</repository>
-      <repository>https://artifactory.appodeal.com/appodeal-public/</repository>
       <repository>https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea</repository>
     </repositories>
   </androidPackages>

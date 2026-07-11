@@ -3,19 +3,15 @@
     <package>androidx.core:core-ktx:1.9.0</package>
     <package>androidx.lifecycle:lifecycle-process:2.6.1</package>
     <package>com.google.code.gson:gson:2.8.5</package>
-    <package>ir.tapsell.mediation.adapter:admob-unity:1.4.0-alpha01</package>
-    <package>ir.tapsell.mediation.adapter:applovin-unity:1.4.0-alpha01</package>
-    <package>ir.tapsell.mediation.adapter:chartboost-unity:1.4.0-alpha01</package>
-    <package>ir.tapsell.mediation.adapter:fyber-unity:1.4.0-alpha01</package>
-    <package>ir.tapsell.mediation.adapter:ironsource-unity:1.4.0-alpha01</package>
-    <package>ir.tapsell.mediation.adapter:legacy-unity:1.4.0-alpha01</package>
-    <package>ir.tapsell.mediation.adapter:liftoff-unity:1.4.0-alpha01</package>
-    <package>ir.tapsell.mediation.adapter:mintegral-unity:1.4.0-alpha01</package>
-    <package>ir.tapsell:tapsell-unity:1.4.0-alpha01</package>
+    <package>ir.tapsell.mediation.adapter:admob-unity:1.4.0-alpha02</package>
+    <package>ir.tapsell.mediation.adapter:applovin-unity:1.4.0-alpha02</package>
+    <package>ir.tapsell.mediation.adapter:legacy-unity:1.4.0-alpha02</package>
+    <package>ir.tapsell.mediation.adapter:mintegral-unity:1.4.0-alpha02</package>
+    <package>ir.tapsell:tapsell-unity:1.4.0-alpha02</package>
   </packages>
   <files />
   <settings>
-    <setting name="androidAbis" value="arm64-v8a,armeabi-v7a" />
+    <setting name="androidAbis" value="arm64-v8a" />
     <setting name="bundleId" value="ir.tapsell.unity.sample" />
     <setting name="explodeAars" value="True" />
     <setting name="gradleBuildEnabled" value="True" />
@@ -26,7 +22,7 @@
     <setting name="packageDir" value="Assets/Plugins/Android" />
     <setting name="patchAndroidManifest" value="True" />
     <setting name="patchMainTemplateGradle" value="True" />
-    <setting name="projectExportEnabled" value="True" />
+    <setting name="projectExportEnabled" value="False" />
     <setting name="useFullCustomMavenRepoPathWhenExport" value="True" />
     <setting name="useFullCustomMavenRepoPathWhenNotExport" value="False" />
     <setting name="useJetifier" value="True" />
