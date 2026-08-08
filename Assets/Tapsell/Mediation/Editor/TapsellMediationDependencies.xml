@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <dependencies>
   <androidPackages>
-    <androidPackage spec="ir.tapsell:tapsell-unity:1.4.0-alpha02" />
+    <androidPackage spec="ir.tapsell:tapsell-unity:1.4.0-alpha03" />
     <androidPackage spec="androidx.lifecycle:lifecycle-process:2.6.1" />
     <androidPackage spec="androidx.core:core-ktx:1.9.0" />
-    <androidPackage spec="ir.tapsell.mediation.adapter:legacy-unity:1.4.0-alpha02" />
-    <androidPackage spec="ir.tapsell.mediation.adapter:admob-unity:1.4.0-alpha02" />
-    <androidPackage spec="ir.tapsell.mediation.adapter:applovin-unity:1.4.0-alpha02" />
-    <androidPackage spec="ir.tapsell.mediation.adapter:mintegral-unity:1.4.0-alpha02" />
+    <androidPackage spec="ir.tapsell.mediation.adapter:legacy-unity:1.4.0-alpha03" />
+    <androidPackage spec="ir.tapsell.mediation.adapter:admob-unity:1.4.0-alpha03" />
+    <androidPackage spec="ir.tapsell.mediation.adapter:applovin-unity:1.4.0-alpha03" />
+    <androidPackage spec="ir.tapsell.mediation.adapter:mintegral-unity:1.4.0-alpha03" />
     <repositories>
       <repository>https://maven.tapsell.ir/</repository>
       <repository>https://maven.google.com/</repository>

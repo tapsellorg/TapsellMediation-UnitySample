@@ -9,11 +9,11 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.9.0' // Assets/Tapsell/Mediation/Editor/TapsellMediationDependencies.xml:6
     implementation 'androidx.lifecycle:lifecycle-process:2.6.1' // Assets/Tapsell/Mediation/Editor/TapsellMediationDependencies.xml:5
     implementation 'com.google.code.gson:gson:2.8.5' // Assets/GoogleMobileAdsNative/Editor/GoogleMobileAdsNativeDependencies.xml:3
-    implementation 'ir.tapsell.mediation.adapter:admob-unity:1.4.0-alpha02' // Assets/Tapsell/Mediation/Editor/TapsellMediationDependencies.xml:8
-    implementation 'ir.tapsell.mediation.adapter:applovin-unity:1.4.0-alpha02' // Assets/Tapsell/Mediation/Editor/TapsellMediationDependencies.xml:9
-    implementation 'ir.tapsell.mediation.adapter:legacy-unity:1.4.0-alpha02' // Assets/Tapsell/Mediation/Editor/TapsellMediationDependencies.xml:7
-    implementation 'ir.tapsell.mediation.adapter:mintegral-unity:1.4.0-alpha02' // Assets/Tapsell/Mediation/Editor/TapsellMediationDependencies.xml:10
-    implementation 'ir.tapsell:tapsell-unity:1.4.0-alpha02' // Assets/Tapsell/Mediation/Editor/TapsellMediationDependencies.xml:4
+    implementation 'ir.tapsell.mediation.adapter:admob-unity:1.4.0-alpha03' // Assets/Tapsell/Mediation/Editor/TapsellMediationDependencies.xml:8
+    implementation 'ir.tapsell.mediation.adapter:applovin-unity:1.4.0-alpha03' // Assets/Tapsell/Mediation/Editor/TapsellMediationDependencies.xml:9
+    implementation 'ir.tapsell.mediation.adapter:legacy-unity:1.4.0-alpha03' // Assets/Tapsell/Mediation/Editor/TapsellMediationDependencies.xml:7
+    implementation 'ir.tapsell.mediation.adapter:mintegral-unity:1.4.0-alpha03' // Assets/Tapsell/Mediation/Editor/TapsellMediationDependencies.xml:10
+    implementation 'ir.tapsell:tapsell-unity:1.4.0-alpha03' // Assets/Tapsell/Mediation/Editor/TapsellMediationDependencies.xml:4
 // Android Resolver Dependencies End
 **DEPS**}
 
