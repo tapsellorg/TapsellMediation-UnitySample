@@ -12,5 +12,6 @@
     "unityadsEnabled": false,
     "wortiseEnabled": false,
     "yandexEnabled": false,
-    "manifestMetaRemoved": true
+    "manifestMetaRemoved": true,
+    "disableAutoInit": false
 }
